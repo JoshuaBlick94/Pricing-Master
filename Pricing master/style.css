@@ -1,0 +1,231 @@
+:root {
+    --HavkesBlue: #d5e3fe;
+    --CrayonBlue: #004df3;
+    --Lust: #ff2725;
+    --DarkPastelGreen: #00b341;
+    --StormDust: #646464;
+    --Mercury: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 1440px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.container .title {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .title h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.container .title h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--StormDust);
+    margin-top: 10px;
+}
+
+.monthly {
+    font-family: "Poppins", sans-serif;
+}
+
+.yearly {
+    font-family: "Poppins", sans-serif;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.card-container .card {
+    height: auto;
+    width: 330px;
+    border: 3px solid var(--HavkesBlue);
+    padding: 30px 50px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.card-container .card:hover {
+    border: 3px solid var(--CrayonBlue);
+}
+
+.card-container .card:hover span {
+    color: var(--CrayonBlue);
+}
+
+.card-container .card .card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container .card .card-title span {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.card-container .card .card-title h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #646464;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-container .card .price {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    width: 90%;
+}
+
+
+.card-container .card .price span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #004df3;
+}
+
+.card-container .card .price span.dollar {
+    font-size: 25px;
+    font-weight: 700;
+    color: #111111;
+    margin-left: 5px;
+}
+
+
+.card-container .card .price h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #646464;
+    margin-left: 10px;
+}
+
+ul.features {
+    margin-top: 30px;
+    list-style-type: none;
+}
+
+ul.features li {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--StormDust);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-container .card button {
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    color: var(--StormDust);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: none;
+    border: 1px solid var(--HavkesBlue);
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative; 
+    font-family: 'Roboto';
+}
+
+
+
+.switch input {
+    height: 35px;
+    width: 100px;
+    background-color: grey;
+    appearance: none; 
+    border-radius: 25px;
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+.switch input::before {
+    content: '';
+    height: 30px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #111111;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.switch input:checked::before {
+    left: 45px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:414px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .container .title {
+        height: 25vh;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .container .title h1 {
+        font-size: 25px;
+    }
+    
+    .container .title h2 {
+        font-size: 18px;
+    }
+    
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 10px;
+        padding: 20px 10px;
+    }
+  
+    .card-container .card {
+        height: auto;
+        width: 330px;
+        border: 3px solid var(--HavkesBlue);
+        padding: 30px 50px;
+        margin-top: 20px;
+    }
+}
+
+
